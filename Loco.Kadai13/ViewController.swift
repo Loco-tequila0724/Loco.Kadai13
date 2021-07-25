@@ -1,19 +1,22 @@
-//
-//  ViewController.swift
-//  Loco.Kadai13
-//
-//  Created by 日高隼人 on 2021/07/25.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
+    private let fruits = ["りんご", "みかん", "バナナ", "パイナップル"]
+    @IBOutlet weak private var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        fruits.count
+    }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") as? CustomTableViewCell
+
+        cell!.setCell(imageView: "checkmark", textLabel: fruits[indexPath.row])
+        return cell!
+    }
 }
-

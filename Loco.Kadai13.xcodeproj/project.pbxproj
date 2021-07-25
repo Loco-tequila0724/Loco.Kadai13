@@ -13,6 +13,7 @@
 		38649B5126AD3D6800AE89EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38649B4F26AD3D6800AE89EA /* Main.storyboard */; };
 		38649B5326AD3D6A00AE89EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38649B5226AD3D6A00AE89EA /* Assets.xcassets */; };
 		38649B5626AD3D6A00AE89EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38649B5426AD3D6A00AE89EA /* LaunchScreen.storyboard */; };
+		38649B6426AD460F00AE89EA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38649B6326AD460F00AE89EA /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		38649B5226AD3D6A00AE89EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38649B5526AD3D6A00AE89EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38649B5726AD3D6A00AE89EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38649B6326AD460F00AE89EA /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +58,12 @@
 		38649B4826AD3D6800AE89EA /* Loco.Kadai13 */ = {
 			isa = PBXGroup;
 			children = (
-				38649B4926AD3D6800AE89EA /* AppDelegate.swift */,
 				38649B4B26AD3D6800AE89EA /* SceneDelegate.swift */,
-				38649B4D26AD3D6800AE89EA /* ViewController.swift */,
-				38649B4F26AD3D6800AE89EA /* Main.storyboard */,
 				38649B5226AD3D6A00AE89EA /* Assets.xcassets */,
+				38649B4D26AD3D6800AE89EA /* ViewController.swift */,
+				38649B6326AD460F00AE89EA /* CustomTableViewCell.swift */,
+				38649B4F26AD3D6800AE89EA /* Main.storyboard */,
+				38649B4926AD3D6800AE89EA /* AppDelegate.swift */,
 				38649B5426AD3D6A00AE89EA /* LaunchScreen.storyboard */,
 				38649B5726AD3D6A00AE89EA /* Info.plist */,
 			);
@@ -77,6 +80,7 @@
 				38649B4226AD3D6800AE89EA /* Sources */,
 				38649B4326AD3D6800AE89EA /* Frameworks */,
 				38649B4426AD3D6800AE89EA /* Resources */,
+				38649B5D26AD3D8F00AE89EA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,6 +136,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38649B5D26AD3D8F00AE89EA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38649B4226AD3D6800AE89EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +163,7 @@
 			files = (
 				38649B4E26AD3D6800AE89EA /* ViewController.swift in Sources */,
 				38649B4A26AD3D6800AE89EA /* AppDelegate.swift in Sources */,
+				38649B6426AD460F00AE89EA /* CustomTableViewCell.swift in Sources */,
 				38649B4C26AD3D6800AE89EA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

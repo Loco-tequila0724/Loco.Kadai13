@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Loco_Kadai13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SNU-8P-JBk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyCell" id="MIi-Zd-J6s" userLabel="MyCell" customClass="CustomTableViewCell" customModule="Loco_Kadai13" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MIi-Zd-J6s" id="m5Y-A2-WIf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiL-wp-vfS">
+                                                    <rect key="frame" x="70" y="10" width="344" height="23.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3sK-J5-eU3">
+                                                    <rect key="frame" x="6" y="3" width="48" height="37.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="48" id="CtL-55-tJ6"/>
+                                                        <constraint firstAttribute="height" constant="37" id="vKq-tv-n8J"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yiL-wp-vfS" firstAttribute="leading" secondItem="3sK-J5-eU3" secondAttribute="trailing" constant="16" id="PZQ-v4-HUM"/>
+                                                <constraint firstAttribute="bottom" secondItem="3sK-J5-eU3" secondAttribute="bottom" constant="3" id="T6e-Tj-SP0"/>
+                                                <constraint firstAttribute="trailing" secondItem="yiL-wp-vfS" secondAttribute="trailing" id="Yp6-yS-HFA"/>
+                                                <constraint firstAttribute="bottom" secondItem="yiL-wp-vfS" secondAttribute="bottom" constant="10" id="fKo-km-Qa8"/>
+                                                <constraint firstItem="yiL-wp-vfS" firstAttribute="top" secondItem="m5Y-A2-WIf" secondAttribute="top" constant="10" id="whg-2s-Syd"/>
+                                                <constraint firstItem="3sK-J5-eU3" firstAttribute="leading" secondItem="m5Y-A2-WIf" secondAttribute="leading" constant="6" id="yHi-oO-MGK"/>
+                                                <constraint firstItem="3sK-J5-eU3" firstAttribute="top" secondItem="m5Y-A2-WIf" secondAttribute="top" constant="3" id="yU8-7B-Z0T"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkMarkImage" destination="3sK-J5-eU3" id="Mvq-RD-wDF"/>
+                                            <outlet property="fruitsLabel" destination="yiL-wp-vfS" id="ovx-YF-mny"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SNU-8P-JBk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0OT-rS-CtY"/>
+                            <constraint firstItem="SNU-8P-JBk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0tR-dF-CN1"/>
+                            <constraint firstItem="SNU-8P-JBk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Sqh-I8-9aZ"/>
+                            <constraint firstAttribute="bottom" secondItem="SNU-8P-JBk" secondAttribute="bottom" id="vBm-dg-guy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="SNU-8P-JBk" id="5v1-TL-nYn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-2472" y="-104"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
