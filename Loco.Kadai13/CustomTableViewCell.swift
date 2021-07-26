@@ -3,17 +3,13 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak private var checkMarkImage: UIImageView!
     @IBOutlet weak private var fruitsLabel: UILabel!
+    func setCell(imageName: String, checkBool: Bool, textLabel: String) {
+        if checkBool == true {
+            checkMarkImage.image = UIImage(systemName: imageName)
+        } else {
+            checkMarkImage.isHidden = true
+        }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
-    func setCell(imageView: String, textLabel: String) {
-        checkMarkImage.image = UIImage(systemName: imageView)
         checkMarkImage.tintColor = .orange
         fruitsLabel.text = textLabel
     }
