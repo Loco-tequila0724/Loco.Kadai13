@@ -50,7 +50,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="checkMarkImage" destination="3sK-J5-eU3" id="Mvq-RD-wDF"/>
+                                            <outlet property="checkMarkImageView" destination="3sK-J5-eU3" id="qiQ-3r-JHK"/>
                                             <outlet property="fruitsLabel" destination="yiL-wp-vfS" id="ovx-YF-mny"/>
                                         </connections>
                                     </tableViewCell>
