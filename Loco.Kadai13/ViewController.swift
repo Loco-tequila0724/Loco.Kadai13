@@ -1,16 +1,19 @@
 import UIKit
 
+struct CheckItem {
+    var name: String
+    var isChecked: Bool
+}
+
 class ViewController: UIViewController {
-    private let fruitsName = "fruitsName"
-    private let checkBool = "checkBool"
     @IBOutlet weak private var tableView: UITableView!
 
-    private var fruits: [[String: Any]] {
+    private var checkItems: [CheckItem] {
         [
-            [fruitsName: "りんご", checkBool: false],
-            [fruitsName: "みかん", checkBool: true],
-            [fruitsName: "バナナ", checkBool: false],
-            [fruitsName: "パイナップル", checkBool: true]
+            CheckItem(name: "りんご", isChecked: false),
+            CheckItem(name: "みかん", isChecked: true),
+            CheckItem(name: "バナナ", isChecked: false),
+            CheckItem(name: "パイナップル", isChecked: true),
         ]
     }
 
@@ -22,16 +25,13 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fruits.count
+        checkItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as? CustomTableViewCell
 
-        guard let checkBool = fruits[indexPath.row][checkBool] as? Bool else { return cell! }
-        guard let textFruitsName = fruits[indexPath.row][fruitsName] as? String else { return cell! }
-
-        cell?.setCell(imageName: "checkmark", checkBool: checkBool, textLabel: textFruitsName)
+        cell?.configure(item: checkItems[indexPath.row])
         return cell!
     }
 }
