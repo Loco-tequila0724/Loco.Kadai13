@@ -50,7 +50,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="checkMarkImage" destination="3sK-J5-eU3" id="Mvq-RD-wDF"/>
+                                            <outlet property="checkMarkImageView" destination="3sK-J5-eU3" id="1tO-Mw-faV"/>
                                             <outlet property="fruitsLabel" destination="yiL-wp-vfS" id="ovx-YF-mny"/>
                                         </connections>
                                     </tableViewCell>
@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2017.3913043478262" y="-206.25"/>
+            <point key="canvasLocation" x="-2748" y="-154"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pqd-8d-jBR">
@@ -95,7 +95,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gb1-Gt-yNa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2765" y="-206"/>
+            <point key="canvasLocation" x="-3362" y="-154"/>
         </scene>
     </scenes>
     <resources>
